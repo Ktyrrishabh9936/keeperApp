@@ -26,7 +26,7 @@ function App() {
       <Navbar/>
       <Alert alert = {alert}/>
             <Routes>
-        <Route path='/NotesApp' element={<Home setShowAlert={setShowAlert}/>}/>
+        <Route path='/' element={<Home setShowAlert={setShowAlert}/>}/>
         <Route exact path='/login'  element={<Login setShowAlert={setShowAlert}/>}/>
         <Route exact path='/signup' element={<Signup  setShowAlert={setShowAlert}/>}/>
       </Routes>
