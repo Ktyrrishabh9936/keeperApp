@@ -1,16 +1,16 @@
 {
   "files": {
     "main.css": "/keeperApp/static/css/main.17a824d3.css",
-    "main.js": "/keeperApp/static/js/main.390cefeb.js",
+    "main.js": "/keeperApp/static/js/main.823f9adc.js",
     "static/js/787.8873dc3e.chunk.js": "/keeperApp/static/js/787.8873dc3e.chunk.js",
     "static/media/notelgo.png": "/keeperApp/static/media/notelgo.3d40be0051252e05e76d.png",
     "index.html": "/keeperApp/index.html",
     "main.17a824d3.css.map": "/keeperApp/static/css/main.17a824d3.css.map",
-    "main.390cefeb.js.map": "/keeperApp/static/js/main.390cefeb.js.map",
+    "main.823f9adc.js.map": "/keeperApp/static/js/main.823f9adc.js.map",
     "787.8873dc3e.chunk.js.map": "/keeperApp/static/js/787.8873dc3e.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.17a824d3.css",
-    "static/js/main.390cefeb.js"
+    "static/js/main.823f9adc.js"
   ]
 }
