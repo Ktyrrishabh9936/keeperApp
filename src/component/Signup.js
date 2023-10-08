@@ -27,7 +27,7 @@ const Signup = (props) => {
       if(logjson.success)
       {
         props.setShowAlert("Hello Rishabh","Welocme to Flowbite");
-        navigate('/');
+        navigate('/NotesApp');
         localStorage.setItem("token",logjson.auth);
       }
       else{

@@ -10,6 +10,7 @@ const Login = () => {
   const [logcr,setlogcr] = useState({emai:"",pass:""});
   // console.log(window.env.hell);
   const submitter = async()=>{
+    console.log(`${API_URL}/api/auth/login`)
     const response = await fetch(`${API_URL}/api/auth/login`,{
         method:"POST",
         headers:{
@@ -21,7 +22,7 @@ const Login = () => {
       if(logjson.updater)
       {
         localStorage.setItem('token',logjson.Authtoken);
-        navigate('/');
+        navigate('/NotesApp');
       }
   }
     const onchanger = (e)=>{
