@@ -1,11 +1,10 @@
 import React, { useContext } from "react";
-import { Link, useLocation, useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import Notecontext from '../notesContext/createcontext';
 import weblogo from '../img/notelgo.png';
 const Navbar = ()=>{
   const modecontext = useContext(Notecontext);
   const {mode,togglemode} = modecontext;
-  const location = useLocation();
   const navgate = useNavigate();
 
   // eslint-disable-next-line no-console
@@ -23,23 +22,7 @@ const Navbar = ()=>{
     </button>
     <div id="menuitem">
     <div className="hidden w-full md:block md:w-auto" id="navbar-default">
-      <ul className="flex flex-col p-4 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700" style={{background:mode.itemcolor,color:`${mode.text}`}}>
-        <li>
-          <Link to="/" className={`block py-2 pl-3 pr-4 bg-blue-700 rounded md:bg-transparent md:hover:text-red-700 ${location.pathname!=='/'?"md:text-grey-700":"md:text-blue-700"} md:p-0 dark:text-white` }>Home</Link>
-        </li>
-        <li>
-          <Link to="/About" className={`block py-2 pl-3 pr-4 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-red-700 ${location.pathname==='/About'?"md:text-blue-700":""} md:p-0 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent`}>About</Link>
-        </li>
-        <li>
-          <Link to="/Contact" className={`block py-2 pl-3 pr-4 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-red-700 ${location.pathname==='/Contact'?"md:text-blue-700":""} md:p-0 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent`}>Contact</Link>
-        </li>
-        <li>
-          <Link to='pricing' className="block py-2 pl-3 pr-4 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-red-700 md:p-0 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Pricing</Link>
-        </li>
-        <li>
-          <Link to='services' className="block py-2 pl-3 pr-4 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-red-700 md:p-0 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Services</Link>
-        </li>
-      </ul>
+      
     </div>
 <label className="relative inline-flex items-center mr-5 cursor-pointer">
   <input type="checkbox" value="" className="sr-only peer" onClick={togglemode}/>

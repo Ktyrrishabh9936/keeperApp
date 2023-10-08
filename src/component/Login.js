@@ -1,15 +1,16 @@
 import React, { useContext, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { BASE_URL } from '../helper';
+import { API_URL } from '../helper';
 import notecontext from '../notesContext/createcontext';
+// import env from "react-dotenv";
 const Login = () => {
   const modetog = useContext(notecontext);
   const {mode} = modetog;
   const navigate = useNavigate();
   const [logcr,setlogcr] = useState({emai:"",pass:""});
+  // console.log(window.env.hell);
   const submitter = async()=>{
-
-    const response = await fetch(`${BASE_URL}/api/auth/login`,{
+    const response = await fetch(`${API_URL}/api/auth/login`,{
         method:"POST",
         headers:{
           "Content-Type":"application/json"},

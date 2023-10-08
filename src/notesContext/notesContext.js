@@ -1,8 +1,7 @@
 import React, { useState } from 'react';
-import { BASE_URL } from '../helper';
+import { API_URL } from '../helper';
 // import { useLocation } from 'react-router-dom';
 // // import { json } from 'react-router-dom';
-
 import Notecontext from './createcontext';
 
 const NoteState = (props)=>{
@@ -21,7 +20,7 @@ const NoteState = (props)=>{
   }
   
   const state = [];
-const host = BASE_URL||'http://localhost:5000';
+const host = API_URL||'http://localhost:5000';
         const getNotes = async()=>{
           const response = await fetch(`${host}/api/notes/getallnotes`,{
             method:"GET",

@@ -2,20 +2,21 @@ import  Alert  from './Alert';
 import React, { useContext, useState } from 'react'
 import { useNavigate,Link } from 'react-router-dom';
 import notecontext from '../notesContext/createcontext';
-import env from "react-dotenv";
+// import env from "react-dotenv";
+import { API_URL } from '../helper';
+
 const Signup = (props) => {
   const modetog = useContext(notecontext);
   const {mode} = modetog;
   const navigate = useNavigate();
   const [logcr,setlogcr] = useState({myname:"",emai:"",pass:"",cpassword:""});
-  const BASE_URL = env.BASEURI;
   const signsubmit = async(e,res)=>{
     e.preventDefault();
     if(logcr.cpassword!==logcr.pass)
     {
       return res.json({success:false,error:"Password Do Not match"});
     }
-    const response = await fetch(`${BASE_URL}/api/auth/createuser`,{
+    const response = await fetch(`${API_URL}/api/auth/createuser`,{
         method:"POST",
         headers:{
           "Content-Type":"application/json"},
